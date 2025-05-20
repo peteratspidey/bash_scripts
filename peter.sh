@@ -1,7 +1,14 @@
 #!/bin/bash
 
 echo "the bash script to automate"
-#!/bin/bash
-sudo apt update -y
-sudo apt upgrade -y
-sudo apt autoremove -y
+echo "system update ho raha hai "
+sudo apt update
+
+echo " open ssh install hora h"
+sudo apt install openssh-server
+
+echo "enabling the ssh"
+sudo systemctl enable ssh
+
+echo "starting the ssh"
+sudo systemctl start ssh
